@@ -133,7 +133,7 @@ function Calculator() {
                     {t("result")}{" "}
                   </h1>
                   <h1 className="text-3xl font-bold text-[#405e89]">
-                    {requiredTheoryGrade.toFixed(2)}
+                    {requiredTheoryGrade.toFixed(1)}
                   </h1>
                 </div>
               )}
