@@ -2,6 +2,7 @@
 
 const { nextui } = require("@nextui-org/react");
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   content: [
     "./index.html",
@@ -16,5 +17,15 @@ export default {
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [
+    nextui({
+      themes: {
+        darkblue: {
+          colors: {
+            background: "#1b2332",
+          },
+        },
+      },
+    }),
+  ],
 };

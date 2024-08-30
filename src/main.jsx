@@ -8,7 +8,9 @@ import "./i18n.js";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <NextUIProvider>
-      <App />
+      <main className="darkblue bg-background w-screen h-screen">
+        <App />
+      </main>
     </NextUIProvider>
   </React.StrictMode>
 );

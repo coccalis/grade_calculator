@@ -1,3 +1,4 @@
+import { warning } from "framer-motion";
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
@@ -18,6 +19,9 @@ i18n
           buttonCl: "Calculate",
           error: "Please enter the percentage",
           result: "The minimum theory grade required to pass is:",
+          warning:
+            "Please ensure that the percentages are within the allowed range.",
+          grderror: "The grade must be between 0 and 10.",
         },
       },
       el: {
@@ -30,6 +34,9 @@ i18n
           error: "Παρακαλώ εισάγετε το ποσοστό",
           result:
             "Η ελάχιστη βαθμολογία στη θεωρία που απαιτείται για να περάσετε είναι:",
+          warning:
+            "Παρακαλώ βεβαιωθείτε ότι τα ποσοστά είναι εντός των επιτρεπόμενων ορίων.",
+          grderror: "Ο βαθμός πρέπει να είναι μεταξύ 0 και 10",
         },
       },
     },
