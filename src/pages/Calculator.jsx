@@ -98,7 +98,7 @@ function Calculator() {
                     isClearable
                     isRequired
                     isInvalid={isInvalid}
-                    errorMessage={setPercError ? "" : t("error")}
+                    errorMessage={setPercError ? t("error") : ""}
                     label={t("inputTH")}
                     placeholder="0"
                     labelPlacement="outside"
@@ -118,7 +118,7 @@ function Calculator() {
                     isClearable
                     isRequired
                     isInvalid={isInvalid}
-                    errorMessage={setPercError ? "" : t("error")}
+                    errorMessage={setPercError ? t("error") : ""}
                     label={t("inputLB")}
                     placeholder="0"
                     labelPlacement="outside"
