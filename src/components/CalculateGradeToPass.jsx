@@ -152,7 +152,7 @@ function CalculateGradeToPass() {
               }}
             />
           </div>
-          <div className="flex xsm:flex-col md:flex-row gap-x-10 my-3">
+          <div className="flex xsm:flex-row md:flex-row gap-x-10  xsm:my-7 md:my-3">
             <Input
               value={inputTheoryGrade}
               onValueChange={setInputTheoryGrade}
@@ -169,24 +169,26 @@ function CalculateGradeToPass() {
                 label: "font-semibold",
               }}
             />
-            <Switch
-              isSelected={isSelected}
-              thumbIcon={({ isSelected, className }) =>
-                isSelected ? (
-                  <ChevronRightIcon className={className} />
-                ) : (
-                  <ChevronLeftIcon className={className} />
-                )
-              }
-              onValueChange={(value) => {
-                setIsSelected(value);
-                setRequiredGrade(null);
-                setInputLabGrade("");
-                setInputTheoryGrade("");
-                setResultInvalid(false);
-              }}
-              classNames={{ wrapper: "bg-[#2b394f]" }}
-            ></Switch>
+            <div className="xsm:flex xsm:flex-row xsm:justify-center">
+              <Switch
+                isSelected={isSelected}
+                thumbIcon={({ isSelected, className }) =>
+                  isSelected ? (
+                    <ChevronRightIcon className={className} />
+                  ) : (
+                    <ChevronLeftIcon className={className} />
+                  )
+                }
+                onValueChange={(value) => {
+                  setIsSelected(value);
+                  setRequiredGrade(null);
+                  setInputLabGrade("");
+                  setInputTheoryGrade("");
+                  setResultInvalid(false);
+                }}
+                classNames={{ wrapper: "bg-[#2b394f]" }}
+              ></Switch>
+            </div>
             <Input
               value={inputLabGrade}
               onValueChange={setInputLabGrade}

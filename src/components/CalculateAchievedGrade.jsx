@@ -107,7 +107,7 @@ function CalculateAchievedGrade() {
         className="w-full"
       >
         <div className="grid grid-rows-2 xsm:m-5 md:m-5">
-          <div className="flex xsm:flex-col md:flex-row gap-x-10 my-2">
+          <div className="flex xsm:flex-col md:flex-row gap-x-10 ">
             <Input
               value={inputTheoryPercentage}
               onValueChange={setinputTheoryPercentage}
@@ -149,22 +149,24 @@ function CalculateAchievedGrade() {
               }}
             />
           </div>
-          <Input
-            value={inputTotalGrade}
-            onValueChange={setInputTotalGrade}
-            isClearable
-            isRequired
-            isInvalid={grdError}
-            errorMessage={t("grderror")}
-            label={t("inputTLG")}
-            placeholder="0"
-            labelPlacement="outside"
-            variant="bordered"
-            classNames={{
-              label: "font-semibold",
-            }}
-          />
-          <div className="flex xsm:flex-col md:flex-row gap-x-10 my-3">
+          <div>
+            <Input
+              value={inputTotalGrade}
+              onValueChange={setInputTotalGrade}
+              isClearable
+              isRequired
+              isInvalid={grdError}
+              errorMessage={t("grderror")}
+              label={t("inputTLG")}
+              placeholder="0"
+              labelPlacement="outside"
+              variant="bordered"
+              classNames={{
+                label: "font-semibold",
+              }}
+            />
+          </div>
+          <div className="flex xsm:flex-row md:flex-row gap-x-10 ">
             <Input
               value={inputTheoryGrade}
               onValueChange={setInputTheoryGrade}
@@ -181,23 +183,25 @@ function CalculateAchievedGrade() {
                 label: "font-semibold",
               }}
             />
-            <Switch
-              isSelected={isSelected}
-              thumbIcon={({ isSelected, className }) =>
-                isSelected ? (
-                  <ChevronRightIcon className={className} />
-                ) : (
-                  <ChevronLeftIcon className={className} />
-                )
-              }
-              onValueChange={(value) => {
-                setIsSelected(value);
-                setRequstedGrade(null);
-                setInputLabGrade("");
-                setInputTheoryGrade("");
-              }}
-              classNames={{ wrapper: "bg-[#2b394f]" }}
-            ></Switch>
+            <div className="xsm:flex xsm:flex-row xsm:justify-center">
+              <Switch
+                isSelected={isSelected}
+                thumbIcon={({ isSelected, className }) =>
+                  isSelected ? (
+                    <ChevronRightIcon className={className} />
+                  ) : (
+                    <ChevronLeftIcon className={className} />
+                  )
+                }
+                onValueChange={(value) => {
+                  setIsSelected(value);
+                  setRequstedGrade(null);
+                  setInputLabGrade("");
+                  setInputTheoryGrade("");
+                }}
+                classNames={{ wrapper: "bg-[#2b394f]" }}
+              ></Switch>
+            </div>
             <Input
               value={inputLabGrade}
               onValueChange={setInputLabGrade}

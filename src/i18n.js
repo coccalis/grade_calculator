@@ -29,6 +29,9 @@ i18n
             "Please ensure that the percentages are within the allowed range.",
           grderror: "The grade must be between 0 and 10.",
           resultInvalid: "The result exceeds the maximum grade limit of 10.",
+          toolTip1: "This tool helps you calculate the grade you need to pass.",
+          toolTip2:
+            "This tool helps you find the grade you got either in theory or in the lab.",
         },
       },
       el: {
@@ -53,6 +56,10 @@ i18n
           grderror: "Ο βαθμός πρέπει να είναι μεταξύ 0 και 10",
           resultInvalid:
             "Το αποτέλεσμα υπερβαίνει το μέγιστο όριο βαθμολογίας 10.",
+          toolTip1:
+            "Αυτό το εργαλείο σας βοηθά να υπολογίσετε το βαθμό που χρειάζεστε για να περάσετε.",
+          toolTip2:
+            "Αυτό το εργαλείο σας βοηθά να βρείτε τον βαθμό που πήρατε είτε στην θεωρία είτε στο εργαστήριο.",
         },
       },
     },
