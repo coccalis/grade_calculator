@@ -15,10 +15,12 @@ i18n
           title: "Calculate your grade!",
           inputTH: "Theory Percentage ",
           inputLB: "Lab Percentage",
+          inputTHG: "Theory Grade",
           inputLBG: "Lab Grade",
           buttonCl: "Calculate",
           error: "Please enter the percentage",
-          result: "The minimum theory grade required to pass is:",
+          resultTH: "The minimum theory grade required to pass is:",
+          resultLB: "The minimum lab grade required to pass is:",
           warning:
             "Please ensure that the percentages are within the allowed range.",
           grderror: "The grade must be between 0 and 10.",
@@ -30,10 +32,13 @@ i18n
           inputTH: "Ποσοστό Θεωρίας",
           inputLB: "Ποσοστό Εργαστηρίου",
           inputLBG: "Βαθμός Εργαστηρίου",
+          inputTHG: "Βαθμός Θεωρίας",
           buttonCl: "Υπολογισμός",
           error: "Παρακαλώ εισάγετε το ποσοστό",
-          result:
+          resultTH:
             "Η ελάχιστη βαθμολογία στη θεωρία που απαιτείται για να περάσετε είναι:",
+          resultLB:
+            "Η ελάχιστη βαθμολογία στο εργαστήριο που απαιτείται για να περάσετε είναι:",
           warning:
             "Παρακαλώ βεβαιωθείτε ότι τα ποσοστά είναι εντός των επιτρεπόμενων ορίων.",
           grderror: "Ο βαθμός πρέπει να είναι μεταξύ 0 και 10",
