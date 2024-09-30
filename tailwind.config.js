@@ -23,6 +23,9 @@ export default {
         darkblue: {
           colors: {
             background: "#1b2332",
+            primary: {
+              DEFAULT: "#405e89",
+            },
           },
         },
       },
