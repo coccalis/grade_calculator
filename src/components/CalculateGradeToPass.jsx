@@ -19,6 +19,7 @@ function CalculateGradeToPass() {
 
   const [percError, setPercError] = useState(false);
   const [grdError, setGrdError] = useState(false);
+  const [resultInvalid, setResultInvalid] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
@@ -27,6 +28,8 @@ function CalculateGradeToPass() {
     setPercError(false);
     setGrdError(false);
     setIsInValid(false);
+    setResultInvalid(false);
+    setRequiredGrade(null);
 
     if (inputTheoryPercentage !== "" && inputLabPercentage !== "") {
       const theoryPercentage = parseFloat(
@@ -38,7 +41,6 @@ function CalculateGradeToPass() {
       const labGrade = parseFloat(inputLabGrade.replace(/[^0-9.]/g, ""));
       const theoryGrade = parseFloat(inputTheoryGrade.replace(/[^0-9.]/g, ""));
 
-      console.log("Grades", { labGrade, theoryGrade });
       if (
         isNaN(theoryPercentage) ||
         isNaN(labPercentage) ||
@@ -56,6 +58,7 @@ function CalculateGradeToPass() {
         theoryGrade > 10
       ) {
         setGrdError(true);
+        setResultInvalid(true);
         return;
       }
 
@@ -78,15 +81,13 @@ function CalculateGradeToPass() {
         }
 
         if (isNaN(result)) {
-          setGrdError(true);
-          setIsInValid(true);
+          setResultInvalid(true);
           setIsLoading(false);
           return;
         }
 
         if (result > 10) {
-          setGrdError(true);
-          setIsInValid(true);
+          setResultInvalid(true);
           setIsLoading(false);
           return;
         }
@@ -182,6 +183,7 @@ function CalculateGradeToPass() {
                 setRequiredGrade(null);
                 setInputLabGrade("");
                 setInputTheoryGrade("");
+                setResultInvalid(false);
               }}
               classNames={{ wrapper: "bg-[#2b394f]" }}
             ></Switch>
@@ -222,6 +224,9 @@ function CalculateGradeToPass() {
           </Button>
         </div>
       </form>
+      <h1 className="font-semibold text-zinc-700 text-center my-2">
+        {resultInvalid ? t("resultInvalid") : ""}
+      </h1>
       {requiredGrade !== null && (
         <div className="my-10 flex flex-col items-center">
           <h1 className="font-semibold text-zinc-700">

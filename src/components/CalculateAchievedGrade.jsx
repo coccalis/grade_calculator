@@ -97,7 +97,6 @@ function CalculateAchievedGrade() {
     }
   };
 
-  console.log(requestedGrade);
   return (
     <>
       <form
