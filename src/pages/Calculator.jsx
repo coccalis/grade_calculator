@@ -27,7 +27,8 @@ function Calculator() {
               aria-label="Options"
               size="lg"
               color="primary"
-              isVertical={true}
+              isVertical={false}
+              className="flex flex-col space-x-10"
               classNames={{
                 base: " bg-[#f5f7fa] border-e-1 border-zinc-200",
                 tab: "font-semibold",
@@ -36,14 +37,10 @@ function Calculator() {
                   "group-data-[selected=true]:text-[#FFFF] group-data-[selected=true]:font-semibold ",
               }}
             >
-              <Tab
-                key="calc_grade"
-                title="Minimum Grade Calculator"
-                className="w-full"
-              >
+              <Tab key="calc_grade" title={t("tab1")} className="w-full">
                 <CalculateGradeToPass />
               </Tab>
-              <Tab key="find-my-grade" title="Achieved Grade Calculator">
+              <Tab key="find-my-grade" title={t("tab2")}>
                 <CalculateAchievedGrade />
               </Tab>
             </Tabs>

@@ -5,6 +5,7 @@ import {
 } from "../utils/gradeCalculator";
 import { useTranslation } from "react-i18next";
 import { Button, Input, Switch } from "@nextui-org/react";
+import { ChevronLeftIcon, ChevronRightIcon } from "../assets/icons/Arrows";
 
 function CalculateGradeToPass() {
   const { t } = useTranslation();
@@ -37,6 +38,7 @@ function CalculateGradeToPass() {
       const labGrade = parseFloat(inputLabGrade.replace(/[^0-9.]/g, ""));
       const theoryGrade = parseFloat(inputTheoryGrade.replace(/[^0-9.]/g, ""));
 
+      console.log("Grades", { labGrade, theoryGrade });
       if (
         isNaN(theoryPercentage) ||
         isNaN(labPercentage) ||
@@ -62,12 +64,16 @@ function CalculateGradeToPass() {
       setTimeout(() => {
         let result;
         if (!isSelected) {
-          result = calculateLabGrade(theoryPercentage, labPercentage, labGrade);
+          result = calculateLabGrade(
+            theoryPercentage,
+            labPercentage,
+            theoryGrade
+          );
         } else {
           result = calculateTheoryGrade(
             theoryPercentage,
             labPercentage,
-            theoryGrade
+            labGrade
           );
         }
 
@@ -147,8 +153,8 @@ function CalculateGradeToPass() {
           </div>
           <div className="flex xsm:flex-col md:flex-row gap-x-10 my-3">
             <Input
-              value={inputLabGrade}
-              onValueChange={setInputLabGrade}
+              value={inputTheoryGrade}
+              onValueChange={setInputTheoryGrade}
               isClearable
               isRequired
               isDisabled={isSelected}
@@ -164,6 +170,13 @@ function CalculateGradeToPass() {
             />
             <Switch
               isSelected={isSelected}
+              thumbIcon={({ isSelected, className }) =>
+                isSelected ? (
+                  <ChevronRightIcon className={className} />
+                ) : (
+                  <ChevronLeftIcon className={className} />
+                )
+              }
               onValueChange={(value) => {
                 setIsSelected(value);
                 setRequiredGrade(null);
@@ -173,8 +186,8 @@ function CalculateGradeToPass() {
               classNames={{ wrapper: "bg-[#2b394f]" }}
             ></Switch>
             <Input
-              value={inputTheoryGrade}
-              onValueChange={setInputTheoryGrade}
+              value={inputLabGrade}
+              onValueChange={setInputLabGrade}
               isClearable
               isRequired
               isDisabled={!isSelected}

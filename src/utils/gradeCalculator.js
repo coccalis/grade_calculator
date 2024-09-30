@@ -26,3 +26,25 @@ export function calculateLabGrade(
 
   return requiredLabGrade;
 }
+
+export function calculateAchievedTheoryGrade(
+  totalGrade,
+  labGrade,
+  theoryPercentage,
+  labPercentage
+) {
+  theoryPercentage = theoryPercentage / 100;
+  labPercentage = labPercentage / 100;
+  return (totalGrade - labGrade * labPercentage) / theoryPercentage;
+}
+
+export function calculateAchievedLabGrade(
+  totalGrade,
+  theoryGrade,
+  theoryPercentage,
+  labPercentage
+) {
+  theoryPercentage = theoryPercentage / 100;
+  labPercentage = labPercentage / 100;
+  return (totalGrade - theoryGrade * theoryPercentage) / labPercentage;
+}
