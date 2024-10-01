@@ -1,8 +1,9 @@
-# A simple Grade Calculator for university
+# Grade calculator for university
 
-![2024-10-01_00-44](https://github.com/user-attachments/assets/64d6df12-ab4f-4d90-8eee-d7efd2557461)
- 
-![2024-10-01_21-52](https://github.com/user-attachments/assets/dfdb115d-5541-4224-b938-32be8035bc2a)
+![2024-10-01_22-05_1](https://github.com/user-attachments/assets/22ff67e7-8cec-42a0-9ca5-86701f348620)
+
+![2024-10-01_22-06](https://github.com/user-attachments/assets/468947e3-13b3-49ea-a773-698da3ec7081)
+
 
 ## About the project
 This project provides two key functionalities:
