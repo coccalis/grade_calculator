@@ -13,13 +13,14 @@ i18n
       en: {
         translation: {
           tab1: "Minimum Grade Calculator",
-          tab2: "Achieved Grade Calculator",
+          tab2: "Grade Breakdown",
           inputTH: "Theory Percentage ",
           inputLB: "Lab Percentage",
           inputTHG: "Theory Grade",
           inputLBG: "Lab Grade",
           inputTLG: "Total Grade",
-          buttonCl: "Calculate",
+          buttonClTH: "Calculate theory grade",
+          buttonClLB: "Calculate lab grade",
           error: "Please enter the percentage",
           resultTH: "The minimum theory grade required to pass is:",
           resultLB: "The minimum lab grade required to pass is:",
@@ -37,13 +38,14 @@ i18n
       el: {
         translation: {
           tab1: "Υπολογιστής Ελάχιστου Βαθμού",
-          tab2: "Υπολογιστής Τελικού Βαθμού",
+          tab2: "Ανάλυση Τελικού Βαθμού",
           inputTH: "Ποσοστό Θεωρίας",
           inputLB: "Ποσοστό Εργαστηρίου",
           inputLBG: "Βαθμός Εργαστηρίου",
           inputTHG: "Βαθμός Θεωρίας",
           inputTLG: "Συνολικός Βαθμός",
-          buttonCl: "Υπολογισμός",
+          buttonClTH: "Υπολογισμός βαθμού θεωρίας",
+          buttonClLB: "Υπολογισμός βαθμού εργαστηρίου",
           error: "Παρακαλώ εισάγετε το ποσοστό",
           resultTH:
             "Η ελάχιστη βαθμολογία στη θεωρία που απαιτείται για να περάσετε είναι:",

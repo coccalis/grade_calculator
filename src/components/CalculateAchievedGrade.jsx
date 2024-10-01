@@ -235,7 +235,7 @@ function CalculateAchievedGrade() {
             radius="md"
             className="bg-[#5377a4] text-white font-semibold"
           >
-            {isLoading ? "" : t("buttonCl")}
+            {isLoading ? "" : isSelected ? t("buttonClTH") : t("buttonClLB")}
           </Button>
         </div>
       </form>
